@@ -74,6 +74,7 @@ def search entries():
 	
 @app.route('/entries')
 #Allows for entries to be seen#
+#Renders visible to user#
 def show_entries():
 	cur=g.db.execute('Select word, helptext from entries order by id desc')
 	entries=[dict(word=row[0], helptext=row[1]) for row in cur.fetchall()]
