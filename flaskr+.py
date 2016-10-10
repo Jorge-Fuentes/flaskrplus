@@ -66,7 +66,6 @@ def show_entries():
 
 
 def search entries():
-#Searches term#
 	word=request.form['searchterm']
 	cur = g.db.execute('select helptext from entries where word - ?' , 
 			[word])
